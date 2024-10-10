@@ -11,6 +11,8 @@ static ThemeData lightTheme =ThemeData(primaryColor: lightPrimary,
 appBarTheme: AppBarTheme(
   centerTitle: true,
   backgroundColor: Colors.transparent,
+  foregroundColor: Colors.black,
+ // iconTheme: IconThemeData(color:Colors.blue ),
   titleTextStyle: TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,
@@ -23,6 +25,12 @@ bottomNavigationBarTheme: BottomNavigationBarThemeData(
   backgroundColor: lightPrimary,
   selectedItemColor: Colors.black,
   unselectedItemColor: white,
+),
+textTheme: TextTheme(
+
+  headlineSmall: TextStyle(fontSize: 25,fontWeight: FontWeight.w400,color: Colors.black),
+  titleLarge: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,color: Colors.black),
+
 )
 
 );

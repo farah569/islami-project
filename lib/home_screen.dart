@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/default_bg.png'),
-          fit: BoxFit.cover, 
+          fit: BoxFit.fill, 
         ),
       ),
       child: Scaffold( 
