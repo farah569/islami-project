@@ -1,34 +1,20 @@
-//import 'package:flutter/material.dart';
-// import 'package:islami/home_screen.dart';
 
-
-// void main() {
-//   runApp(const slamiApp());
-// }
-
-// class IslamiApp extends StatelessWidget {
-  
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       routes:{
-//         HomeScreen.routeName : (_) => HomeScreen(),
-//       },
-//       initialRoute: HomeScreen.routeName ,
-
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:islami/app_theme.dart';
 import 'package:islami/home_screen.dart';
 import 'package:islami/tabs/hadeth/hadeth_content_screen.dart';
-import 'package:islami/tabs/quran/sura_content_screen.dart'; // Ensure this path is correct
+import 'package:islami/tabs/quran/sura_content_screen.dart';
+import 'package:islami/tabs/settings/settings_provider.dart';
+import 'package:provider/provider.dart'; // Ensure this path is correct
 
-void main() {
-  runApp(const IslamiApp());
+void main() 
+{
+  runApp(
+    ChangeNotifierProvider(create: (_)=> SettingsProvider(),
+    child: IslamiApp(),
+    ),
+   
+    );
 }
 
 class IslamiApp extends StatelessWidget {
@@ -36,6 +22,7 @@ class IslamiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SettingsProvider settingsProvider =Provider.of<SettingsProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
@@ -46,7 +33,7 @@ class IslamiApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName , 
       theme: AppTheme.lightTheme ,
       darkTheme: AppTheme.darkTheme ,
-      themeMode: ThemeMode.light,
+      themeMode: settingsProvider.themeMode,
     );
   }
 }
