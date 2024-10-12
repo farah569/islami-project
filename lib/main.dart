@@ -5,7 +5,7 @@ import 'package:islami/home_screen.dart';
 import 'package:islami/tabs/hadeth/hadeth_content_screen.dart';
 import 'package:islami/tabs/quran/sura_content_screen.dart';
 import 'package:islami/tabs/settings/settings_provider.dart';
-import 'package:provider/provider.dart'; // Ensure this path is correct
+import 'package:provider/provider.dart'; 
 
 void main() 
 {

@@ -65,4 +65,6 @@ textTheme: TextTheme(
  
  
  );
+
+  static var black;
  }
