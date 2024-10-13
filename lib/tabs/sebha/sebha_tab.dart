@@ -72,7 +72,7 @@ class _SebhaTabState extends State<SebhaTab> {
             Container(
               padding: EdgeInsets.all(10), 
               decoration: BoxDecoration(
-                color: const Color.fromARGB(169, 201, 185, 44), 
+                color: Color(0xFFB7935F),
                 borderRadius: BorderRadius.circular(10), 
               ),
               child: Text(
@@ -91,7 +91,7 @@ class _SebhaTabState extends State<SebhaTab> {
                 width: 100,
                 height: 50,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 160, 130, 22), 
+                  color: Color.fromARGB(255, 36, 36, 36),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
@@ -108,6 +108,7 @@ class _SebhaTabState extends State<SebhaTab> {
     );
   }
 }
+
 
 
 
